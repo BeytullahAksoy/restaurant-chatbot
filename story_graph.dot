@@ -1,0 +1,30 @@
+digraph  {
+0 [class="start active", fillcolor=green, fontsize=12, label=START, style=filled];
+"-1" [class=end, fillcolor=red, fontsize=12, label=END, style=filled];
+1 [class=active, fontsize=12, label=action_session_start];
+2 [class=active, fontsize=12, label=order_form];
+8 [class=active, fontsize=12, label=action_default_fallback];
+9 [class=active, fontsize=12, label=action_session_start];
+16 [class="dashed active", fontsize=12, label=action_default_fallback];
+17 [class="intent active", fillcolor=lightblue, label="sipariþ", shape=rect, style=filled];
+18 [class="intent active", fillcolor=lightblue, label="çoban salata", shape=rect, style=filled];
+19 [class="intent active", fillcolor=lightblue, label="address no1", shape=rect, style=filled];
+20 [class="intent active", fillcolor=lightblue, label="beytullah aksoy", shape=rect, style=filled];
+21 [class="intent active", fillcolor=lightblue, label=05333333333, shape=rect, style=filled];
+0 -> "-1"  [class="", key=NONE, label=""];
+0 -> 1  [class=active, key=NONE, label=""];
+1 -> 17  [class=active, key=0];
+2 -> 8  [class=active, key=NONE, label=""];
+2 -> 18  [class=active, key=0];
+2 -> 19  [class=active, key=0];
+2 -> 20  [class=active, key=0];
+2 -> 21  [class=active, key=0];
+8 -> 9  [class=active, key=NONE, label=""];
+9 -> 8  [class=active, key=NONE, label=""];
+9 -> 16  [class=active, key=NONE, label=""];
+17 -> 2  [class=active, key=0];
+18 -> 2  [class=active, key=0];
+19 -> 2  [class=active, key=0];
+20 -> 2  [class=active, key=0];
+21 -> 2  [class=active, key=0];
+}

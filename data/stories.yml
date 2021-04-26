@@ -1,0 +1,27 @@
+version: "2.0"
+stories:
+  - story: greet user
+    steps:
+      - action: greet_user
+
+
+  - story: user requests reservation
+    steps:
+      - intent: reservation
+      - action: reservation_form
+      - active_loop: reservation_form
+      - active_loop: null
+      - action: utter_reservation_confirmed
+      - action: utter_anything_else
+
+  - story: user requests order
+    steps:
+        - intent: order
+        - action: list_menu
+        - action: order_form
+        - active_loop: order_form
+        - active_loop: null
+        - action: utter_order_confirmed
+        - action: utter_anything_else
+
+

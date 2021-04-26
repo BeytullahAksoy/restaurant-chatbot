@@ -1,0 +1,199 @@
+version: "2.0"
+
+session_config:
+  session_expiration_time: 60  # value in minutes
+  carry_over_slots_to_new_session: false
+
+
+intents:
+  - chitchat:
+      use_entities: []
+  - reservation:
+      use_entities: []
+  - order:
+      use_entities: []
+
+  - inform
+  - affirm
+  - deny
+  - stop
+  - thankyou
+  - greet
+  - bot_challenge
+  - goodbye
+  - food
+
+
+
+
+entities:
+  - date
+  - count
+  - number
+  - hour
+  - food
+  - food_count
+  - cancel
+  - situation
+  - feedback
+
+
+slots:
+  person_name:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  person_count:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  person_phone_number:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  reservation_hour:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  reservation_date:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  food:
+    type: list
+    auto_fill: false
+    influence_conversation: false
+  person_address:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  food_count:
+    type: list
+    auto_fill: false
+    influence_conversation: false
+  cancel_food:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  situation_order:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  feedback:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+responses:
+
+  utter_submit:
+  - text: Tamamdır!
+  utter_noworries:
+    - text: rici :)
+  utter_chitchat:
+    - text: geyik?
+  utter_ask_continue:
+    - text: Devam etmek ister misin?
+  utter_wrong_person_count:
+    - text: Kişi sayısı belirtmelisin ve tabii ki 0 dan büyük olmalı
+  utter_wrong_person_name:
+    - text: İsim boş veya sayılardan oluşamaz
+  utter_wrong_person_address:
+    - text: Lütfen adresinizi doğru giriniz
+  utter_wrong_reservation_hour:
+    - text : Saati doğru giriniz (Örn:13:30)
+  utter_wrong_reservation_date:
+      - text: Tarihi doğru giriniz (Örn:2021-05-10)
+  utter_wrong_person_phone_number:
+    - text: Telefon numaranızı eksik veya fazla girdiniz
+  utter_wrong_food:
+    - text: Lütfen yemek adını doğru giriniz
+  utter_default:
+    - text: Pardon, seni anlamadım, bugün kafam yerinde değil sanırım, tekrar dener misin?
+  utter_greet:
+    - text: Tekrardan Merhaba. Rezervasyon yapmak veya sipariş vermek ister misiniz?
+  utter_iamabot:
+    - text: Ben akıllı bir restorant asistanıyım.
+  utter_restart:
+    - text: Başka bir arama yapmak ister misin?
+  utter_thanks:
+    - text: Bizimle iletişime geçtigin için teşekkürler. Yine bekleriz..!
+  utter_unclear:
+    - text: Ne yapmak istediğini anlayamadım. Tekrar dener misin?
+  utter_cheer_up:
+    - text: "Seni güldürebilecek bir şeyler:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_did_that_help:
+    - text: Yardımcı oldu mu?
+  utter_happy:
+    - text: Harika!
+  utter_goodbye:
+    - text: Kendine dikkat et!
+  utter_ask_person_name:
+    - text: Adınız ve soyadınızı alabilir miyim?
+  utter_ask_person_count:
+    - text: Kaç kişi?
+  utter_ask_person_phone_number:
+    - text: Telefon numaranız nedir?
+  utter_ask_reservation_hour:
+    - text: Saat Kaçta(Örn:13:30)?
+  utter_ask_person_address:
+    - text: Lütfen adresinizi giriniz.
+  utter_ask_food_count:
+    - text: Kaç adet?
+  utter_ask_cancel_food:
+    - text: Hangi yemeği iptal etmek istiyorsunuz?
+  utter_ask_situation_order:
+    - text: Sipariş durumunuzu öğrenmek için ütfen adınızı giriniz.
+  utter_ask_feedback:
+    - text: Hizmetimiz hakkında geribildirim yapmak ister misiniz?
+  utter_ask_food:
+    - text: Sepete eklemek istediğiniz yemeği yazınız. Yemek seçimini bitirmek için 'bitir' yazınız.
+  utter_ask_reservation_date:
+    - text: Rezervasyonlar önümüzdeki 2 hafta için yapılmaktadır.Hangi Tarihte(Örn:2025-05-10)?
+  utter_reservation_confirmed:
+    - text: Reservasyonunuzu yaptım.
+  utter_order_confirmed:
+    - text: Siparişinizi verdim.
+  utter_anything_else:
+    - text: Başka bir isteğiniz var mı?
+
+actions:
+  - validate_reservation_form
+  - validate_order_form
+  - list_menu
+  - greet_user
+forms:
+
+   order_form:
+    food:
+      - type: from_text
+    food_count:
+      - type: from_text
+    cancel_food:
+      - type: from_text
+    situation_order:
+      - type: from_text
+    feedback:
+      - type: from_text
+    person_name:
+      - type: from_text
+    person_address:
+      - type: from_text
+    person_phone_number:
+      - type: from_text
+
+   reservation_form:
+    person_name:
+      - type: from_text
+    person_count:
+      - type: from_text
+    person_phone_number:
+      - type: from_text
+    reservation_hour:
+      - type: from_text
+    reservation_date:
+      - type: from_text
+
+
+
+

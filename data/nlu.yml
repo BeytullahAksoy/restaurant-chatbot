@@ -1,0 +1,257 @@
+version: "2.0"
+nlu:
+  - intent: reservation
+    examples: |
+      - rezervasyon
+      - rezervasyon istiyorum
+      - yer ayırtmak istiyorum
+      - rezervasyon yapmak istiyorum
+
+  - intent: order
+    examples: |
+        - sipariş
+        - sipariş istiyorum
+        - sipariş vermek istiyorum
+        - paket servis istiyorum
+
+
+
+
+
+  - intent: food
+    examples: |
+        - salata(food)
+        - pide(food)
+
+
+  - intent: greet
+    examples: |
+      - selam
+      - hey
+      - selam bot
+      - hey bot
+      - merhaba
+      - meraba
+      - günaydın
+      - selam tekrar
+      - selamlar
+      - merhabalar
+      - iyi akşamlar
+      - slm
+      - nasılsın
+      - nasılsınız
+      - naber
+      - N’aber
+      - gunaydin
+      - iyi günler
+      - nasıl gidiyor
+      - nasılsın
+      - yy
+  - intent: goodbye
+    examples: |
+      - bye
+      - bay
+      - bay bay
+      - görüşürüz
+      - hoşça kal
+      - güle güle
+      - şimdilik hoşça kal
+      - sonra görüşürüz
+      - gitmem lazım
+      - gittim
+      - gitmeliyim
+      - sonra
+      - sonra konuşuruz
+      - Bir daha ki sefere görüşürüz
+      - gitmem gerek
+      - iyi günler
+      - iyi tatiller
+      - iyi eğlenceler
+      - ben kaçar
+      - iyi geceler
+      - kendine iyi bak
+      - elveda
+      - gitme zamanı
+      - ayrılık vakti
+      - yeniden görüşene kadar
+  - intent: affirm
+    examples: |
+      - evet
+      - doğru
+      - yess
+      - yea
+      - tamam
+      - olumlu
+      - olumluyum
+      - alırım
+      - tamamdır
+      - olur
+      - anlaştık
+      - eminim
+      - öyledir
+      - öyle
+      - tabi ki
+      - bu doğru
+      - doğrudur
+      - kesinlikle
+      - gerçektir
+      - harika
+      - elbette
+      - tamam devam
+      - kabul
+      - gerçek
+      - uyar
+      - ben de
+      - haklısın
+      - bana uyar
+      - iyi fikir
+      - aynen öyle
+      - son kararım
+      - onaylıyorum
+      - katılıyorum
+      - kabul ediyorum
+      - devam edebilir
+      - neden olmasın
+      - bu muhteşem olur
+      - tam olarak öyle
+      - evet lütfen
+      - evet isterim
+      - evet doğru anladın
+      - bu çok iyi bir fikir
+      - tabi ki çok isterim
+      - istiyorum
+      - isterim teşekkürler
+      - Ben de aynen böyle düşünüyordum
+  - intent: deny
+    examples: |
+      - hayır
+      - yanlış
+      - hayır yeni arama
+      - hayır teşekkürler
+      - hayır teşekkür ederim
+      - olumsuz
+      - olumsuzum
+      - tamam değil
+      - olmaz
+      - değil
+      - emin değilim
+      - iyi fikir değil
+      - red
+      - reddediyorum
+      - kabul etmiyorum
+      - onaylamıyorum
+      - devam etmiyorum
+      - kötü fikir
+      - yanlıştır
+      - yanlış anladın
+      - öyle değil
+      - devam etme
+      - hayır yanlış anladın
+      - uymaz
+      - bana uymaz
+      - istemem
+      - istemem teşekkürler
+      - aynı şekilde düşünmüyoruz
+      - yapamam
+      - aksine
+      - katılmıyorum
+      - maalesef
+      - ne yazıkki
+      - özür dilerim ama yapamam
+      - alamam
+      - belki başka zaman
+  - intent: inform
+    examples: |
+      - [1](number) kişi
+      - [2](number) tane
+      - [1](number)
+      - [5](number) adet istiyorum
+      - [7](number) kişi olacağız
+      - [3](number) masa istiyoruz
+      - telefon numaram [5427109810](number)
+      - saat [15:30](hour)
+      - saat [18:00](hour)
+      - [15:30](hour)
+      - [4:30](hour)
+      - [15:30](hour) saatinde
+      - 02.04.2021(date) tarihinde
+      - 02.04.2021(date)
+      - 02.04.2021(date) gününde
+  - intent: thankyou
+    examples: |
+      - teşekkürler
+      - teşekkürler iyi günler
+      - tamam teşekkürler
+      - tşk
+      - tmm
+      - teşekkür ederim
+      - sağol
+      - sağolun
+      - çok teşekkürler
+      - her şey için çok teşekkür ediyorum
+      - çok naziksin
+      - yardımın için teşekkürler.
+  - intent: chitchat
+    examples: |
+      - sahibini tanımak istiyorum
+      - sizi tasarlayan şirketi tanımak istiyorum
+      - sizi yaratan şirketi bilmek istiyorum
+      - seni icat eden şirketi tanımak istiyorum
+      - seni kimin icat ettiğini bilmek istiyorum
+      - Seni kimin icat ettiğini sorabilir miyim?
+      - lütfen bana seni yaratan şirketi söyle
+      - lütfen bana seni kimin yarattığını söyle
+      - bana yaratıcılarınız hakkında daha fazla bilgi verin
+      - bana kurucularınız hakkında daha fazla bilgi verin
+      - iyi misin
+      - güzel bir gün geçiriyor musun
+      - İyi misin?
+      - iyi misin
+      - İyi hissediyor musun?
+      - nasıl gidiyor
+      - durumun nasıl?
+      - Bunlar nasıl?
+      - Bu sabah nasılsın
+      - nasıl hissediyorsun
+      - bugün nasılsınız
+      - Bugün hava nasıl?
+      - Hava nasıl?
+      - Yerinde hava nasıl?
+      - Havan güzel mi?
+      - Yağmur yağıyor mu?
+      - Dışarısı nasıl?
+      - Sıcak mı soğuk mu?
+      - Güzel bir gün değil mi?
+      - Hava tahmini nasıl?
+      - Dışarısı oldukça esintili mi?
+  - intent: stop
+    examples: |
+      - yardımcı olmuyorsun
+      - bana yardım edemezsin
+      - ihtiyacım olan şeyde bana yardım edemezsin
+      - sanırım bana yardım edemezsin o zaman
+      - tamam sanırım bana yardım edemezsin
+      - istediğim bu değil
+      - tamam ama bu bana yardımcı olmuyor
+      - bu hiçbir şeye götürmez
+      - bu konuşma pek yardımcı olmuyor
+      - istediğim şeyde bana yardım edemezsin
+      - Sanırım bana yardım edemezsin
+      - hm istediğimi yapabileceğini sanmıyorum
+      - Dur
+      - dur geri dön
+      - bir şey anlıyor musun?
+      - ve kendine bot şirketi mi diyorsun? pff
+      - ve bu kadar mı
+      - başka bir şey?
+  - intent: bot_challenge
+    examples: |
+      - bot musun?
+      - insan mısın ?
+      - botla mı konuşuyorum?
+      - insanla mı konuşuyorum?
+  - intent: hello_world
+    examples: |
+      - hello
+      - world
+      - hello world
