@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "ssat-rasa"
+name = "chatbot-rasa"
 version = "0.1.0"
 description = ""
-authors = ["deniz gül <denizgul@gmail.com>"]
+authors = ["beytullah aksoy <beytullah557@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = ">=3.8,<3.9"
